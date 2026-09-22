@@ -13,7 +13,7 @@ setInterval(function(){
 // MicroTask Queue
 // nextTick Queue
 
-fs.writeFile("notes.txt", "Hello ELCE- B", function(err){
+fs.writeFile("notes.txt", "Hello ELCE- A", function(err){
     if(err) {
         console.log(err);
         return
@@ -25,7 +25,7 @@ fs.writeFile("notes.txt", "Hello ELCE- B", function(err){
         console.log("setImmediate inside fs write method");
     })
 
-    console.log("File has been written");
+    console.log("File has been written successfully");
 
 })
 setImmediate(() => {

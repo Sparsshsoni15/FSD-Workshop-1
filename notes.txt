@@ -1,1 +1,14 @@
-Hello ELCE- B
+Node.js uses Vite engine of Chrome
+Node.js uses Spider-Monkey in Firefox
+Node.js uses Chakra in Edge
+
+-> Phases for calling a function:- (Strict Synchronous Phase)
+1. Timer Phase
+2. Pending Phase 
+3. Idle, Prepare Phase 
+4. Poll Phase 
+5. Check Phase 
+6. Close Phase 
+
+Execute:- setTimeout
+          setInterval
