@@ -1,16 +1,23 @@
-import eventEmitter from "node:events";
+import EventEmitter from "node:events";
 
-const emitter = new EventEmitter();
+const emitter = new EventEmitter()
 
 // Register Event
-emitter.on("OrdderPlaced",(orderName, value)=>{
-    console.log("Order $(orderNmae) has been placed successfully");
+emitter.on("OrderPlaced",(orderName, orderPrice)=>{
+    console.log(`Order ${orderName} and Price: ${orderPrice} placed successfully`); // ` > Template Literal
+})
+
+
+
+emitter.on("OrderPlaced", ()=>{
+    console.log("Notification sent to the user");
 })
 emitter.on("OrderPlaced", ()=>{
-    console.log('Invetory Updated');
+    console.log("Email sent to the user");
+})
+emitter.on("OrderPlaced", ()=>{
+    console.log("Inventory updated");
 })
 
 //Trigger the event
-emitter.emit("OrdderPlaced", "iPhone 18", 159000)
-emitter.listenerCount("OrderPlaced")
-emitter
+emitter.emit("OrderPlaced", "iPhone", 158000);
